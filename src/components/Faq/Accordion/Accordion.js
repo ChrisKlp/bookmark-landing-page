@@ -55,7 +55,6 @@ const StyledArrow = styled(Arrow)`
 const Content = styled.div`
   border-bottom: 1px solid ${({ theme }) => rgba(theme.colorText, 0.15)};
   overflow: hidden;
-  max-height: ${({ data }) => data}px;
   transition: max-height 0.5s cubic-bezier(0.13, 0.66, 0.36, 1);
 `;
 
@@ -83,7 +82,7 @@ const Accordion = ({ title, content }) => {
         {title}
         <StyledArrow active={active} />
       </AccordionButton>
-      <Content ref={contentRef} data={contentHeight}>
+      <Content ref={contentRef} style={{maxHeight: `${contentHeight}px`}}>
         <Text>{content}</Text>
       </Content>
     </Wrapper>

@@ -98,7 +98,7 @@ const Header = () => {
         <a href="/" aria-label="Logo Bookmark">
           <Logo white={activeMenu} />
         </a>
-        <MenuToggleBtn active={activeMenu} onClick={menuToggle} />
+        <MenuToggleBtn active={activeMenu} onClick={menuToggle} aria-label="Menu Toggle Button"/>
         <Navigation active={activeMenu} />
       </InnerWrapper>
       {activeMenu && (
