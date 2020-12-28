@@ -10,6 +10,10 @@ import { sharedInnerWrapper, sharedWrapper } from '../../theme/GlobalStyle';
 const Wrapper = styled.section`
   text-align: center;
   margin-bottom: 14rem;
+
+  @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
+    margin-bottom: 14.9rem;
+  } ;
 `;
 
 const InnerWrapper = styled.div`

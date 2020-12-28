@@ -13,6 +13,7 @@ const Wrapper = styled.ul`
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
     padding: 0;
+    margin-top: 4.8rem;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;

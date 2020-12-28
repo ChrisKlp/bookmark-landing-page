@@ -5,11 +5,11 @@ import { sharedInnerWrapper, sharedWrapper } from '../../theme/GlobalStyle';
 
 const Wrapper = styled.section`
   ${sharedWrapper}
-  padding-bottom: 14rem;
+  margin-bottom: 14rem;
   text-align: center;
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
-    padding-bottom: 14.9rem;
+    margin-bottom: 14.9rem;
   } ;
 `;
 

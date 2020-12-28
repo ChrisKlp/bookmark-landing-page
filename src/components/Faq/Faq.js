@@ -10,6 +10,10 @@ const Wrapper = styled.section`
   ${sharedInnerWrapper}
   padding-bottom: 14.9rem;
   text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
+    padding-bottom: 15rem;
+  } ;
 `;
 
 const StyledHeading = styled(Heading)`

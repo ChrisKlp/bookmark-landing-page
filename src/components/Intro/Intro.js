@@ -59,6 +59,7 @@ const Illustration = styled.img`
 
   @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
     margin: 0;
+    width: auto;
     max-width: unset;
   } ;
 `;
