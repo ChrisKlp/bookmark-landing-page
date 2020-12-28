@@ -84,6 +84,7 @@ const FormTemplate = ({ error, onChange, onSubmit, value }) => {
       <InputWrapper error={error}>
         <input
           value={value}
+          aria-label="Enter your email address"
           onChange={onChange}
           placeholder="Enter your email address"
         />

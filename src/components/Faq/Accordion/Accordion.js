@@ -22,24 +22,21 @@ const AccordionButton = styled.button`
   width: 100%;
   background: transparent;
   border: none;
-  outline: none;
-  cursor: pointer;
-`;
-
-const Title = styled.p`
   flex-grow: 1;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 3.2rem;
   color: ${({ theme }) => theme.colorText};
   transition: color 0.2s;
+  outline: none;
+  cursor: pointer;
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
     font-size: 1.8rem;
     line-height: 3.2rem;
   }
 
-  ${AccordionButton}:hover & {
+  &:hover {
     color: ${({ theme }) => theme.colorSecondary};
   }
 `;
@@ -58,7 +55,7 @@ const StyledArrow = styled(Arrow)`
 const Content = styled.div`
   border-bottom: 1px solid ${({ theme }) => rgba(theme.colorText, 0.15)};
   overflow: hidden;
-  max-height: ${({ height }) => height}px;
+  max-height: ${({ data }) => data}px;
   transition: max-height 0.5s cubic-bezier(0.13, 0.66, 0.36, 1);
 `;
 
@@ -83,10 +80,10 @@ const Accordion = ({ title, content }) => {
   return (
     <Wrapper>
       <AccordionButton onClick={accordionToggle}>
-        <Title>{title}</Title>
+        {title}
         <StyledArrow active={active} />
       </AccordionButton>
-      <Content ref={contentRef} height={contentHeight}>
+      <Content ref={contentRef} data={contentHeight}>
         <Text>{content}</Text>
       </Content>
     </Wrapper>

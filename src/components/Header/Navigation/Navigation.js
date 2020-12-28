@@ -119,7 +119,7 @@ const Navigation = ({ active }) => {
           <NavLink href="#">Contact</NavLink>
         </NavItem>
       </NavList>
-      <NavButton as="button" delay="200">
+      <NavButton as="button" aria-label="Login Button" delay="200">
         Login
       </NavButton>
     </Wrapper>

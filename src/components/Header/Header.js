@@ -95,7 +95,7 @@ const Header = () => {
   return (
     <Wrapper>
       <InnerWrapper active={activeMenu}>
-        <a href="/">
+        <a href="/" aria-label="Logo Bookmark">
           <Logo white={activeMenu} />
         </a>
         <MenuToggleBtn active={activeMenu} onClick={menuToggle} />
@@ -104,10 +104,10 @@ const Header = () => {
       {activeMenu && (
         <MobileBackground>
           <SocialIcons>
-            <a href="#">
+            <a href="#" aria-label="Facebook">
               <Facebook />
             </a>
-            <a href="#">
+            <a href="#" aria-label="Twitter">
               <Twitter />
             </a>
           </SocialIcons>

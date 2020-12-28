@@ -82,10 +82,10 @@ const Footer = () => {
           <Link href="#">Contact</Link>
         </Nav>
         <SocialIcons>
-          <a href="#">
+          <a href="#" aria-label="Facebook">
             <Facebook />
           </a>
-          <a href="#">
+          <a href="#" aria-label="Twitter">
             <Twitter />
           </a>
         </SocialIcons>
