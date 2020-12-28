@@ -37,25 +37,26 @@ const InnerWrapper = styled.div`
 const StyledBackground = styled(BlueBackground)`
   display: block;
   position: absolute;
+  height: 54vw;
+  max-height: 35.2rem;
   top: 3.5rem;
-  left: -85%;
-  right: 15%;
+  right: 17.9vw;
   z-index: -1;
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
-    left: -36rem;
-    width: 100rem;
+    width: 200rem;
   }
 
   @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
     top: 8.3rem;
-    width: clamp(80rem, 75%, 100rem);
-  }
+    right: 55.5vw;
+  } ;
 `;
 
 const Illustration = styled.img`
   margin-bottom: 6.9rem;
   width: 100%;
+  max-width: 53.6rem;
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
     display: block;
@@ -82,6 +83,10 @@ const Content = styled.div`
 
 const Paragraph = styled.p`
   margin-bottom: 1.5rem;
+
+  @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
+    margin: 1.6rem 0 3.2rem;
+  } ;
 `;
 
 const Feature = ({ illustration, heading, content }) => {

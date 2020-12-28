@@ -5,30 +5,39 @@ import illustration from '../../assets/illustration-hero.svg';
 import { sharedInnerWrapper, sharedWrapper } from '../../theme/GlobalStyle';
 import BlueBackground from '../Svg/BlueBackground';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   padding-top: 4rem;
   margin-bottom: 14rem;
   position: relative;
   overflow: hidden;
 
+  @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
+    padding-top: 6rem;
+  }
+
   @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
-    min-height: 52.6rem;
+    min-height: 54.6rem;
+    margin-bottom: 8rem;
   } ;
 `;
 
 const StyledBackground = styled(BlueBackground)`
   position: absolute;
   display: block;
+  height: 54vw;
   top: 9.2rem;
-  left: 20%;
-  right: -70%;
+  left: 20vw;
   z-index: -1;
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
-    width: 100rem;
-    top: 17.4rem;
-    right: -48.5rem;
-    left: unset;
+    width: 200rem;
+    height: 35.2rem;
+    top: 13rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
+    top: 19.4rem;
+    left: 64vw;
   } ;
 `;
 
@@ -45,10 +54,12 @@ const Illustration = styled.img`
   order: 1;
   display: block;
   margin: 0 auto 6.9rem;
-  width: 90%;
+  width: 100%;
+  max-width: 58rem;
 
   @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
     margin: 0;
+    max-width: unset;
   } ;
 `;
 

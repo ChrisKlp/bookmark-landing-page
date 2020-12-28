@@ -10,10 +10,13 @@ import Twitter from '../Svg/Icons/Twitter.js';
 
 const Wrapper = styled.header`
   position: relative;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem 0;
   display: flex;
   justify-content: center;
+
+  @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
+    padding: 4.8rem 0;
+  }
 `;
 
 const InnerWrapper = styled.div`

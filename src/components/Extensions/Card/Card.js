@@ -14,6 +14,7 @@ const Wrapper = styled.li`
 
   @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
     max-width: 28rem;
+    width: 100%;
   }
 
   @media (min-width: ${({ theme }) => theme.mediaSize.lg}) {
@@ -41,6 +42,10 @@ const BrowserLogo = styled.img`
 
 const Paragraph = styled.p`
   margin-top: 0.6rem;
+
+  @media (min-width: ${({ theme }) => theme.mediaSize.md}) {
+    font-size: 1.5rem;
+  } ;
 `;
 
 const Card = ({ logo, browser, minVersion }) => {
